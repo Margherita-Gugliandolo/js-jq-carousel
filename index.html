@@ -8,28 +8,32 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <!-- Collegamento css -->
       <link rel="stylesheet" href="./style.css">
+      <!-- Script JS -->
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
    <div class="container">
-     <div class="left">
+     <div class="prev">
       <a href="#"><i class="fas fa-chevron-left"></i></a>
      </div>
-     <section>
-       <img class="photo" src="img/food1.jpg" alt="">
-       <!-- <img class="photo" src="img/food2.jpg" alt="">
-       <img class="photo" src="img/food3.jpg" alt="">
-       <img class="photo" src="img/food4.jpg" alt=""> -->
-       <div class="pointer">
+     <section class="album">
+       <img class="first active" src="img/food1.jpg" alt="">
+       <img  src="img/food2.jpg" alt="">
+       <img  src="img/food3.jpg" alt="">
+       <img class="last" src="img/food4.jpg" alt="">
+
+       <div class="nav">
+         <i class="fas fa-circle first active"></i>
          <i class="fas fa-circle"></i>
          <i class="fas fa-circle"></i>
-         <i class="fas fa-circle"></i>
+         <i class="fas fa-circle last"></i>
        </div>
      </section>
-     <div class="right">
+     <div class="next">
       <a href="#"><i class="fas fa-chevron-right"></i></a>
      </div>
 
    </div>
-   <script type="text/javascript" src="./script.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
   </body>
 </html>
