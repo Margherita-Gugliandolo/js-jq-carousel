@@ -6,7 +6,7 @@ var prev = $('.prev');
 console.log(next);
 
 next.click(function(){
- nextImg();
+    nextImg();
 });
 
 prev.click(function(){
@@ -14,7 +14,18 @@ prev.click(function(){
  });
 });
 
+
+
 // Funzioni
+
+// uso dei tasti
+$(document).keydown (function(){
+ if(event.which==39 || event.keyCode==39){
+   nextImg();
+ } else if (event.which==37 || event.keyCode==37){
+   prevImg();
+ }
+})
 
 function nextImg(){
   var imgActive = $('.album img.active');
