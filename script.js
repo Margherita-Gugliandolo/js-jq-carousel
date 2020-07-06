@@ -6,7 +6,17 @@ var prev = $('.prev');
 console.log(next);
 
 next.click(function(){
+ nextImg();
+});
 
+prev.click(function(){
+ prevImg();
+ });
+});
+
+// Funzioni
+
+function nextImg(){
   var imgActive = $('.album img.active');
   var pointer = $('.nav i.active');
 
@@ -23,27 +33,23 @@ next.click(function(){
     imgActive.next().addClass('active');
     pointer.next().addClass('active');
   }
-});
+}
 
-prev.click(function(){
+function prevImg(){
+  var imgActive = $('.album img.active');
+  var pointer = $('.nav i.active');
 
-    var imgActive = $('.album img.active');
-    var pointer = $('.nav i.active');
+  imgActive.removeClass('active');
+  imgActive.prev().addClass('active');
 
-    imgActive.removeClass('active');
+  pointer.removeClass('active');
+  pointer.prev().addClass('active');
+
+  if(imgActive.hasClass('first') == true){
+  $('.album img.last').addClass('active');
+  $('.nav i.last').addClass('active');
+  }else{
     imgActive.prev().addClass('active');
-
-    pointer.removeClass('active');
     pointer.prev().addClass('active');
-
-    if(imgActive.hasClass('first') == true){
-    $('.album img.last').addClass('active');
-    $('.nav i.last').addClass('active');
-    }else{
-      imgActive.prev().addClass('active');
-      pointer.prev().addClass('active');
-    }
-  });
-});
-
-// Funzioni in definizione
+  }
+}
